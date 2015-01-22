@@ -9,8 +9,8 @@
         activate: function () {
             router.map([
                 { route: '', title:ko.translate("Welcome"), moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true },
-                { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true }
+                { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true }
+                // { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true }
             ]).buildNavigationModel();
             
             return router.activate();
