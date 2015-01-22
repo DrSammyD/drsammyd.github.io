@@ -1,0 +1,31 @@
+﻿
+    <nav class="top-bar">
+        <ul class="title-area">
+            <li class="name">
+                <h1></h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+        </ul>
+        <section class="top-bar-section">
+            <a class="brand" data-bind="attr: { href: router.navigationModel()[0].hash }">
+                <i class="fa fa-home"></i>
+                <span>Durandal</span>
+            </a>
+                
+            <ul class="right">
+                {{#foreach router.navigationModel()}}
+                <li data-bind="css: { active: isActive }">
+                    <a data-bind="attr: { href: hash }, html: title"></a>
+                </li>
+                {{/foreach}}
+                <li>                    
+                    <a data-bind="click: switchLang "class="button">{{ko.t("Lang")}}</a>
+                </li>
+            </ul>
+        </section>
+    </nav>
+    <div class="row">
+        <div class="small-12">
+            <div class="container-fluid page-host" data-bind="router: { transition:'entrance', cacheViews:true }"></div>
+        </div>
+    </div>
