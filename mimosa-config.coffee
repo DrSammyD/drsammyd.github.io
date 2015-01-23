@@ -29,7 +29,7 @@ exports.config =
   sass:
     lib: require('node-sass')
     extensions: ["sass", "scss"]
-    includePaths: ['stylesheets/vendor/foundation/scss']
+    includePaths: ['stylesheets/vendor/foundation/scss','stylesheets/vendor/Hover/scss']
     
   requireBuildTextPluginInclude:
     pluginPath: 'text'
@@ -59,6 +59,9 @@ exports.config =
         "foundation":[          
             "js/foundation"
             scss: "foundation"
+        ],
+        "hovercss":[
+          scss:"hover/scss"
         ]
         "knockout.punches":['knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
@@ -112,7 +115,7 @@ exports.config =
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
         infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
-        infered.optimize = 'none'
+        infered.build= true
         return infered
 
   server:
