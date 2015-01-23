@@ -9,7 +9,8 @@
         activate: function () {
             router.map([
                 { route: '', title:ko.translate("Welcome"), moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true }
+                { route: 'inputmask', title:ko.translate("Inputmasks"), moduleId: 'viewmodels/inputmask', nav: true },
+                { route: 'coverletter/:companyId', title:ko.translate("Coverletter"), moduleId: 'viewmodels/coverletter', nav: true }
                 // { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true }
             ]).buildNavigationModel();
             
