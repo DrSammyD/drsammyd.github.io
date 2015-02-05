@@ -1,0 +1,24 @@
+<!-- export name="explanation" -->
+<h1 id="-ko-t-markdown-markdown-">{{ko.t(&#39;markdown:Markdown&#39;)}}!!!</h1>
+<p>{{ko.t(&#39;markdown:MdIntro&#39;)}}</p>
+<p>{{ko.t(&#39;markdown:MdExample&#39;)}} <code>{{ko.t(&#39;markdown:ModuleName&#39;)}}.md</code></p>
+<pre><code>&lt;!-- {{&#39;export&#39;}} name=&quot;obj.prop&quot;--&gt;
+{{ko.t(&#39;markdown:SecondProperty&#39;)}}
+=========
+{{ko.t(&#39;markdown:SecondSentence&#39;)}}
+&lt;!-- {{&#39;export&#39;}} name=&quot;obj.otherProp&quot;--&gt;
+{{ko.t(&#39;markdown:FirstProperty&#39;)}}
+==========
+{{ko.t(&#39;markdown:FirstSentence&#39;)}}
+</code></pre><p>{{ko.t(&#39;markdown:HtmlExample&#39;)}}</p>
+<pre><code>&lt;div class=&quot;markdown-body&quot;&gt;
+    &lt;!-- {{&#39;import&#39;}} name=&quot;text!{{ko.t(&#39;markdown:ModuleName&#39;)}}.html!export&quot; path=&quot;obj.otherProp&quot; --&gt;
+    &lt;!-- {{&#39;import&#39;}} name=&quot;text!{{ko.t(&#39;markdown:ModuleName&#39;)}}.html!export&quot; path=&quot;obj.prop&quot; --&gt;
+&lt;/div&gt;
+</code></pre><p>{{ko.t(&#39;markdown:OutExample&#39;)}}</p>
+<!-- export name="obj.prop"-->
+<h1 id="-ko-t-markdown-secondproperty-">{{ko.t(&#39;markdown:SecondProperty&#39;)}}</h1>
+<p>{{ko.t(&#39;markdown:SecondSentence&#39;)}}
+<!-- export name="obj.otherProp"--></p>
+<h1 id="-ko-t-markdown-firstproperty-">{{ko.t(&#39;markdown:FirstProperty&#39;)}}</h1>
+<p>{{ko.t(&#39;markdown:FirstSentence&#39;)}}</p>

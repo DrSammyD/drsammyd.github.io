@@ -1,0 +1,58 @@
+<!--export name:'vcard.header'-->
+<h1 id="-ko-t-webcomponent-header-">{{ko.t(&#39;webcomponent:Header&#39;)}}</h1>
+<p>{{ko.t(&#39;webcomponent:Summary&#39;)}}</p>
+<h3 id="-ko-t-webcomponent-vcard-">{{ko.t(&#39;webcomponent:Vcard&#39;)}}</h3>
+<p>{{ko.t(&#39;webcomponent:VcardExample&#39;)}}
+<!-- export name:'vcard.example' --></p>
+<h3 id="-ko-t-webcomponent-creation-">{{ko.t(&#39;webcomponent:Creation&#39;)}}</h3>
+<p>{{ko.t(&#39;webcomponent:HtmlExample&#39;)}}</p>
+<pre><code class="lang-html">&lt;ul class=&quot;vcard&quot;&gt;
+    &lt;li class=&quot;fn&quot;&gt;{{&#39;{{Name}}&#39;}}&lt;/li&gt;
+    &lt;li class=&quot;street-address&quot;&gt;{{&#39;{{Street}}&#39;}}&lt;/li&gt;
+    &lt;li class=&quot;locality&quot;&gt;{{&#39;{{City}}&#39;}}&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&quot;state&quot;&gt;{{&#39;{{State}}&#39;}}&lt;/span&gt;, &lt;span class=&quot;zip&quot;&gt;{{&#39;{{Zip}}&#39;}}&lt;/span&gt;&lt;/li&gt;
+    &lt;li class=&quot;text-large&quot;&gt;
+        &lt;span class=&quot;fa-lg&quot;&gt;
+            &lt;a class=&quot;hvr-grow&quot; href=&quot;mailto:{{&#39;{{Email}}&#39;}}&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;hvr-grow&quot; href=&quot;{{&#39;{{Github}}&#39;}}&quot;&gt;&lt;i class=&quot;fa fa-lg fa-github&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;hvr-grow&quot; href=&quot;{{&#39;{{Linkedin}}&#39;}}&quot;&gt;&lt;i class=&quot;fa fa-lg fa-linkedin&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;hvr-grow&quot; href=&quot;{{&#39;{{Stackoverflow}}&#39;}}&quot;&gt;&lt;i class=&quot;fa fa-lg fa-stack-overflow&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>{{ko.t(&#39;webcomponent:JavascriptExample&#39;)}}</p>
+<pre><code class="lang-javascript">define([&#39;knockout&#39;,&#39;text!./vcard.html&#39;],function(ko,template){
+    return {
+        viewModel: function(params) {
+            if(params.viewModel)
+                ko.utils.extend(this,params.viewModel);
+            else
+                ko.utils.extend(this,params);
+        },
+        template:template
+    };
+});
+</code></pre>
+<h3 id="-ko-t-webcomponent-register-">{{ko.t(&#39;webcomponent:Register&#39;)}}</h3>
+<p>{{ko.t(&#39;webcomponent:RegisterExample&#39;)}}</p>
+<pre><code class="lang-javascript">define([&#39;knockout&#39;],function(ko){
+    ko.components.register(&#39;vcard&#39;, { require: &#39;components/vcard/vcard&#39; });
+});
+</code></pre>
+<h3 id="-ko-t-webcomponent-usage-">{{ko.t(&#39;webcomponent:Usage&#39;)}}</h3>
+<p>{{ko.t(&#39;webcomponent:UsageExample&#39;)}}</p>
+<pre><code class="lang-html">&lt;vcard params=&quot;viewModel:vcard&quot;&gt;&lt;/vcard&gt;
+</code></pre>
+<pre><code class="lang-javascript">vm.vcard={
+    Name:&quot;John Rego&quot;,
+    Street:&quot;123 Main St&quot;,
+    City:&quot;Houston&quot;,
+    State:&quot;Texas&quot;,
+    Zip:&quot;77004&quot;,
+    Email:&quot;JRego@sharklasers.com&quot;,
+    Github:&quot;http://www.github.com/JRego&quot;,
+    Linkedin:&quot;http://www.linkedin.com/JRego&quot;,
+    Stackoverflow:&quot;http://www.stackoverflow.com/JRego&quot;
+};
+</code></pre>
