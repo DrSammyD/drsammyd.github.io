@@ -1,26 +1,27 @@
 path = require('path')
 exports.config =
-
+  
   minMimosaVersion:'2.0.0'
   liveReload:
     enabled:true
 
   modules: [
-    'server'
-    'require'
-    'minify-js'
-    'minify-css'
-    'sass'
-    'live-reload'
-    'jshint'
-    'csslint'
+    'bower'
     'combine'
+    'copy'
+    'csslint'
+    'jshint'
+    'live-reload'
+    'markdown'
+    'minify-css'
+    'minify-js'
+    'require'
+    'require-commonjs'
     'requirebuild-include'
     'requirebuild-textplugin-include'
-    'bower'
-    'require-commonjs'
+    'sass'
+    'server'
     'web-package'
-    'copy'
   ]
 
   watch:
@@ -29,7 +30,7 @@ exports.config =
   sass:
     lib: require('node-sass')
     extensions: ["sass", "scss"]
-    includePaths: ['stylesheets/vendor/foundation/scss','stylesheets/vendor/Hover/scss']
+    includePaths: ['stylesheets/vendor/foundation','stylesheets/vendor/Hover/scss']
     
   requireBuildTextPluginInclude:
     pluginPath: 'text'
@@ -56,12 +57,20 @@ exports.config =
             css: "durandal"
           }
         ]
-        "foundation":[          
+        "datetimepicker":[
+            "dist/javascripts/jquery.moment.datetimepicker.js"
+            'stylesheets/'            
+        ]
+        "foundation":[
             "js/foundation"
-            scss: "foundation"
-        ],
-        "hovercss":[
-          scss:"hover/scss"
+            'scss/normalize.scss'
+            "scss/foundation/":'/foundation/'
+        ]
+        "hover":[
+          "scss/effects":'/hover/effects'
+          "scss/_hacks.scss":'/hover/_hacks.scss'
+          "scss/_mixins.scss":'/hover/_mixins.scss'
+          "scss/_options.scss":'/hover/_options.scss'
         ]
         "knockout.punches":['knockout.punches.js']
         "knockout.deferred":['knockout.punches.js']
@@ -74,13 +83,13 @@ exports.config =
           "css/font-awesome.css"
           "css/font-awesome-ie7.css"
         ]
-        "lodash":[
-          'dist':'lodash'
-        ]
         "smalot-bootstrap-datetimepicker":[
           'js':'smalot-bootstrap-datetimepicker'
         ]
         "knockout-es5":[
+          'dist'
+        ]
+        "lodash":[
           'dist'
         ]
         "moment":[
@@ -91,8 +100,10 @@ exports.config =
           "velocity.js"
           "velocity.ui.js"
         ]
-        "bootstrap":[]
-        "knockout.js":[]
+        "require-texport":[
+          "text.js":"requirejs-text/"
+        ]
+
   combine:
     folders: [
       {
@@ -104,18 +115,20 @@ exports.config =
         ]
       }
     ]
+
   require:
+    commonConfig: "ref"
     optimize:
       inferConfig:true 
       overrides: (infered)->
-        infered.mainConfigFile='./public/javascripts/app/ref.js'
         infered.name='main'
         infered.include=['requireLib', 'main']
         infered.insertRequire=['main']
         infered.paths ={'requireLib':'../vendor/requirejs/require'}
         infered.baseUrl= process.cwd()+'/public/javascripts/app'.split('/').join(path.sep)
-        infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
+        #infered.out= process.cwd()+'/public/javascripts/app/main-built.js'.split('/').join(path.sep)
         infered.build= true
+        infered.optimize='uglify2'
         return infered
 
   server:
@@ -128,6 +141,7 @@ exports.config =
 
   csslint:
     exclude:[
-      'stylesheets/site.scss'
+      'stylesheets/app/site.scss'
       'stylesheets/starterkit.css'
+      '/stylesheets/vendor/hover/scss/hover.scss'
    ]
