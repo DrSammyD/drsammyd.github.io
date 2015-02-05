@@ -1,1 +1,0 @@
-define(['i18next','datetimepicker'],function(i18,dp){});
