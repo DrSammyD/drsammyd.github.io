@@ -1,21 +1,8 @@
 <section>
-    <h3>{{ko.t('coverletter:Greetings',{companyName:ko.t('coverletter/'+comp+':Name')})}}</h3>
+    <h3>{{ko.t('coverletter:Greetings',{companyName:ko.t('coverletter/'+comp+':Name')})}}</h3><img src="" alt="">
     <p></p>
     <p>{{ko.t('coverletter/'+comp+':Beginning')}}</p>
     <p>{{ko.t('coverletter/'+comp+':Middle')}}</p>
     <p>{{ko.t('coverletter/'+comp+':End')}}</p>
-    <ul class="vcard right">
-        <li class="fn">Sam Armstong</li>
-        <li class="street-address">1625 Main St</li>
-        <li class="locality">Houston</li>
-        <li><span class="state">Texas</span>, <span class="zip">77002</span></li>
-        <li class="email"><a href="#">sam.armstrong@bitcadia.com</a></li>
-        <li class="text-large">
-            <span class="fa-lg">
-                <a class="tiny" href="{{'https://github.com/DrSammyD'}}"><i class="social-icons icon-zoom fa fa-lg fa-github"></i></a>
-                <a class="tiny" href="https://www.linkedin.com/pub/samuel-armstrong/18/a39/b42"><i class="social-icons icon-zoom fa fa-lg fa-linkedin"></i></a>
-                <a class="tiny" href="http://stackoverflow.com/users/364282/drsammyd"><i class="social-icons icon-zoom fa fa-lg fa-stack-overflow"></i></a>
-            </span>
-        </li>
-    </ul>
+    <vcard class="right" params="viewModel:vcard"></vcard>
 </section>
