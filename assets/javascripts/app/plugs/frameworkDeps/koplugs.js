@@ -8,6 +8,7 @@ define(['ko-go',
         'onceIf',
         'selectizeBinding',
         'maskBinding',
+        'htmlBinding',
         'components/register'
     ],
     function(){});
