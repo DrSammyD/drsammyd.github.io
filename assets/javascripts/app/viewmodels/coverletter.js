@@ -2,7 +2,8 @@ define(['knockout', 'viewmodels/shell'], function(ko, shell) {
     var router = shell.router;
     var comps = {
         'a14923a': 'Volution',
-        'b3847jb': 'WaterFall'
+        'b3847jb': 'WaterFall',
+        't48h4mk': 'eHealthInsurance'
     };
     var vm = function() {};
     var fn = vm.prototype;
