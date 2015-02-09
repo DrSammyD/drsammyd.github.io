@@ -3,7 +3,7 @@ define(['knockout', 'viewmodels/shell'], function(ko, shell) {
     var comps = {
         'a14923a': 'Volution',
         'b3847jb': 'WaterFall',
-        't48h4mk': 'eHealthInsurance'
+        't48h4mk': 'projekt202'
     };
     var vm = function() {};
     var fn = vm.prototype;
