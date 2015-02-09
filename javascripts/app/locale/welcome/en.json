@@ -1,19 +1,15 @@
 {
-    "Welcome":{
-        "DisplayName":"Welcome to Durandal!",
-        "Description":"Durandal is a cross-device, cross-platform client framework written in JavaScript and designed to make Single Page Applications (SPAs) easy to create and maintain.",
-        "Features":{
-            "Clean":"Clean MV* Architecture",
-            "Modular":"JS & HTML Modularity",
-            "Lifecycle":"Simple App Lifecycle",
-            "Event":"Eventing, Modals, Message Boxes, etc.",
-            "Navigation":"Navigation & Screen State Management",
-            "Async":"Consistent Async Programming w/ Promises",
-            "Optimization":"App Bundling and Optimization",
-            "Backend":"Use any Backend Technology",
-            "Libraries":"Built on top of jQuery, Knockout & RequireJS",
-            "Integrates":"Integrates with other libraries such as SammyJS & Foundation",
-            "Widgets":"Make jQuery & Foundation widgets templatable and bindable (or build your own widgets)"
-        }
-    }
+    "Header":"Welcome to Bitcadia",
+    "Summary":"This is a stack that I've been building on, trying to address pain points of web development, and I think I have it in a good state right now, good enough to show it to you anyway.",
+    "Separate":"Separating Concerns",
+    "SeparateDurandal":"Separate your views from your view models using __link__",
+    "Durandal":"Durandal",
+    "I18Next":"Separate your text from your view using __link__ (click set language to see what I mean)",
+    "I18NextLink":"i18next",
+    "MarkdownSummary":"Separate your __link__ from you view models using requirejs",
+    "Markdown":"markdown",
+    "InputmaskSummary": "Separate your input from your values using __link__",
+    "Inputmask":"input masks",
+    "WebcomponentSummary": "Separate and your __link__ from your views and viewmodels using knockout.",
+    "Webcomponent":"web components"
 }
