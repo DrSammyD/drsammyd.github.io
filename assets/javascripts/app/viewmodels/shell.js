@@ -14,6 +14,8 @@
                 { route: 'kodash', title:ko.translate("Kodash"), moduleId: 'viewmodels/kodash', nav: true },
                 { route: 'markdown', title:ko.translate("Markdown"), moduleId: 'viewmodels/markdown', nav: true },
                 { route: 'webcomponent', title:ko.translate("Webcomponent"), moduleId: 'viewmodels/webcomponent', nav: true },
+                { route: 'webcomponent', title:ko.translate("Webcomponent"), moduleId: 'viewmodels/webcomponent', nav: true },
+                { route: 'i18n', title:ko.translate("I18n"), moduleId: 'viewmodels/i18n', nav: true },
                 { route: 'coverletter/:companyId', title:ko.translate("Coverletter"), moduleId: 'viewmodels/coverletter', nav: true }
             ]).buildNavigationModel();
             
