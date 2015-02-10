@@ -1,10 +1,11 @@
 {
-    "Lang": "Définir la langue",
-    "Welcome":"Bienvenue",
     "I18n":"Localisation",
     "Inputmasks":"Masque de saisie",
     "Coverletter":"Lettre De Motivation",
     "Kodash":"Kodash",
+    "Durandal":"Durandal",
+    "Lang": "Définir la langue",
     "Markdown":"Démarque",
-    "Webcomponent":"Web Composants"
+    "Webcomponent":"Web Composants",
+    "Welcome":"Bienvenue"
 }
