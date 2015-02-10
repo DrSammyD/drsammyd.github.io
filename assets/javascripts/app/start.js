@@ -10,14 +10,14 @@ define(['durandal/app',
     ],
     function(app, viewLocator, system, ko) {
         var req = require;
-        //>>excludeStart("build", true);
+        //>>excludeStart("build", pragmas.build);
         system.debug(true);
         //>>excludeEnd("build");
         req({
             baseUrl: './javascripts/app'
         });
         ko.punches.enableAll();
-        app.title = 'Durandal';
+        app.title = 'Bitcadia';
 
 
         app.configurePlugins({
