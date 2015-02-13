@@ -22,7 +22,6 @@ define(['knockout', 'i18next', 'moment', 'text!locale/supported.json','datetimep
         setlng(lng, options, othercb);
     };
     i18next.init({
-        preload: ['shell:en'],
         customLoad: function (lng, ns, cb, loadComplete) {
             var loadcb = function (data) {
                 var jsData = JSON.parse(data);

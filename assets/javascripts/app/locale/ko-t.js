@@ -1,17 +1,17 @@
-define(['knockout', 'jquery', 'locale/current-locale'], function(ko, $, locale) {
+define(['knockout', 'i18next', 'locale/current-locale'], function(ko, i18next, locale) {
     
     var keys=[];
     var requestKey=function(key){
         if(!~keys.indexOf(key))
         {
-            $.i18n.loadNamespace(key);
+            i18next.loadNamespace(key);
             keys.push(key);
         }
     };
     ko['t'] = function(key, options) {
         locale();
         locale.ns();
-        if (!$.i18n.exists(key))
+        if (!i18next.exists(key))
             requestKey(key.split(':')[0]);
         var unwrapped = {};
         if (options) {
@@ -23,14 +23,14 @@ define(['knockout', 'jquery', 'locale/current-locale'], function(ko, $, locale) 
                 }
             }
         }
-        return $.i18n.t(key, unwrapped);
+        return i18next.t(key, unwrapped);
     };
 
     ko['translate'] = function(key, options) {
         return ko.computed(function() {
             locale();
             locale.ns();
-            if (!$.i18n.exists(key))
+            if (!i18next.exists(key))
                 requestKey(key.split(':')[0]);
             var unwrapped = {};
             if (options) {
@@ -42,7 +42,7 @@ define(['knockout', 'jquery', 'locale/current-locale'], function(ko, $, locale) 
                     }
                 }
             }
-            return $.i18n.t(key, unwrapped);
+            return i18next.t(key, unwrapped);
         });
     };
 });
