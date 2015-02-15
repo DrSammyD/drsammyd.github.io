@@ -22,7 +22,7 @@ define(['plugins/router', 'durandal/app','i18next','locale/current-locale','knoc
             return router.activate();
         },
         switchLang:function(){
-            locale()=="en"?i18next.setLng("fr"):i18next.setLng("en");
+            locale()=="en"?locale("fr"):locale("en");
         }
     };
 });

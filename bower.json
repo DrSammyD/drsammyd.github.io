@@ -32,7 +32,8 @@
     "toastr": "~2.0.1",
     "velocity": "~1.1.0",
     "kodash": "~2.0.5",
-    "lodash": "~3.1.0"
+    "lodash": "~3.1.0",
+    "setImmediate": "git://github.com/YuzuJS/setImmediate.git#~1.0.2"
   },
   "devDependencies": {
     "requirejs": "~2.1.11"
